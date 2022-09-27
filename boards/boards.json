@@ -1,0 +1,13 @@
+{
+    "lolin_d32":{
+        "board":"lolin_d32",
+        "name":"Lolin D32"
+    },
+
+    "m5stick-c":{
+        "board":"m5stick-c",
+        "name":"M5Stick C"
+    }
+
+
+}

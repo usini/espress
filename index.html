@@ -1,0 +1,63 @@
+<!doctype html>
+<html id="theme" data-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Espress</title>
+    <style>
+        .components {
+            transition: transform 0.2s;
+            opacity: 0.8;
+        }
+
+        .components:hover {
+            opacity: 1;
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+
+<body style="opacity:0;">
+    <nav>
+        <ul>
+            <li>
+                <h3><a href="index.html"><span style="color:red;">µ</span><span id="logo" style="color:white">SINI
+                            Espress</span></a></h3>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h3><a class="i18n" href="about.html">About</a></h3>
+            </li>
+            <li>
+                <h3><a class="i18n" href="https://github.com/usini/espress">Code</a></h3>
+            </li>
+            <li>
+                <h3><a id="change-theme" onclick="change_theme()" href="javascript:void(0);"></a></h3>
+            </li>
+        </ul>
+    </nav>
+
+    <center>
+        <h1 class="i18n">Test your components without code !</h1>
+    </center>
+    <center>
+        <article>
+        <!-- Dropdown -->
+        <select onchange="change_board(self)" id="selected_board">
+            
+        </select>
+            <img id="selected_board_image" src="">
+        </article>
+    </center>
+
+    <div class="container-fluid" id="components">
+    </div>
+
+</body>
+<script type="text/javascript" src="js/default.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</html>

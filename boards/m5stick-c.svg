@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="97.62429mm"
+   height="43.412998mm"
+   viewBox="0 0 97.62429 43.412998"
+   version="1.1"
+   id="svg3644"
+   sodipodi:docname="m5stick-c.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs3648" /><sodipodi:namedview
+     id="namedview3646"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="240.41631"
+     inkscape:cy="205.06097"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3644" /><!-- Code injected by live-server --><script
+     id="script3642">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]></script><path
+     id="path7132"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:33.753"
+     d="m -213.60398,-9122.4093 c -3972.46552,17.4912 -7799.35912,2380.5944 -9221.15912,6309.122 -1638.6229,4527.6228 604.2456,9828.1948 5216.7812,11460.9068 4059.38634,1436.9115 8802.3496,-586.5752 10228.9984,-4732.4782 l -3432.3982,-1495.21 c -590.0778,2282.3802 -3118.01711,3433.0358 -5301.3984,2795.2898 -2747.5626,-802.538 -4115.2078,-3880.1466 -3279.585,-6533.2981 1012.0516,-3213.3223 4642.9371,-4799.0283 7765.1987,-3763.8883 3679.4773,1219.8764 5483.8665,5406.13651 4248.1829,8997.0984 -8e-4,0 8e-4,0 0,0 l 3432.39,1495.202 C 11486.407,-53.358827 8804.2265,-6470.8505 3258.0353,-8514.3557 2126.1935,-8931.3845 950.04763,-9127.5333 -213.60398,-9122.4093 Z M 2578.6183,2419.9313 C 3021.3397,707.51603 2085.6237,-1277.7778 267.62347,-1649.567 -971.18425,-1902.9086 -2430.4713,-1177.0074 -2569.9749,177.12461 c -77.9888,757.0205 460.7058,1744.44469 1342.3967,1605.69839 325.35451,-51.1991 890.08223,-633.1921 373.79831,-858.09341 z" /><rect
+     style="fill:#f7a538;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-dasharray:none"
+     id="rect15488"
+     width="74.648384"
+     height="37.043556"
+     x="13.096207"
+     y="3.3675961"
+     ry="4.490128" /><rect
+     style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:0.899999;stroke-dasharray:none"
+     id="rect16091"
+     width="33.114693"
+     height="16.557346"
+     x="21.14102"
+     y="13.657473"
+     ry="0.93544286" /><path
+     style="fill:#f7a538;fill-opacity:1;stroke:#af6707;stroke-width:0.899999;stroke-dasharray:none;stroke-opacity:1"
+     d="M 76.659582,10.757598 65.2004,10.851143 c -1.184765,0.332688 -1.396375,1.111468 -1.870886,1.917659 l -0.04677,17.820195 c 0.442522,1.179549 1.381418,1.744318 2.057974,2.104747 l 11.739813,-0.04677"
+     id="path16147"
+     sodipodi:nodetypes="cccccc" /><text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;fill:#fa9627;fill-opacity:1;stroke:none;stroke-width:0.899999;stroke-dasharray:none"
+     x="-30.775898"
+     y="75.078629"
+     id="text16252"
+     transform="rotate(-90)"><tspan
+       sodipodi:role="line"
+       id="tspan16250"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;fill:#fa9627;fill-opacity:1;stroke:none;stroke-width:0.9"
+       x="-30.775898"
+       y="75.078629">M5</tspan></text></svg>

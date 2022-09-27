@@ -1,0 +1,90 @@
+<!doctype html>
+<html id="theme" data-theme="dark" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/pico.min.css">
+  <title>Espress</title>
+  <style>
+    .red {
+      background-color:rgb(167, 52, 52);
+      border-color:rgb(167, 52, 52);
+    }
+
+    .red:hover {
+      opacity: 0.9;
+    }
+
+
+  </style>
+</head>
+
+<body style="opacity:0;">
+
+  <nav>
+    <ul>
+      <li>
+        <h3><a href="index.html"><span style="color:red;">µ</span><span id="logo" style="color:white">SINI
+              Espress</span></a></h3>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3><a class="i18n" href="about.html">About</a></h3>
+      </li>
+      <li>
+        <h3><a class="i18n" href="https://github.com/usini/espress">Code</a></h3>
+      </li>
+      <li>
+        <h3><a id="change-theme" onclick="change_theme()" href="javascript:void(0);"></a></h3>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+  <center><img id="schematics" src=""></center>
+  <br>
+  <button id="app_selector" class="i18n" data-target="modal-apps" onClick="toggleModal(event)">Choose an application</button>
+ 
+  <button class="red i18n" onclick="document.location.href='index.html'">Choose another component</button>  
+  <div id="html_app"></div>  
+</div>
+
+  <article id="not-supported">
+    <span class="i18n">⚠️ Your browser can't connect to USB Serial, so you can't upload applications and interact with your microcontroller. ⚠️</span>
+    <ul>
+    <li class="i18n">If you are on an 📱smartphone, please use a 💻 computer</li> 
+    <li class="i18n">If you are on a 💻 computer, please use Chrome / Edge or Opera (❌ Firefox / Safari is not supported yet)</li>
+    </ul>
+    <a href="https://caniuse.com/web-serial" class="i18n">Check compatibility list</a>
+  </article>
+
+</body>
+
+
+<!-- Modal -->
+<dialog id="modal-apps">
+  <div id="container">
+    <h3 class="i18n">Choose an application</h3>
+    <div id="apps">
+
+  </div>
+    <button data-target="modal-apps" onClick="toggleModal(event)" class="i18n">Cancel</button>
+</dialog>
+
+<!-- Interaction Library -->
+<script type="text/javascript" src="js/esperial/esprerial.min.js"></script>
+<script type="text/javascript" src="js/gauge/gauge.min.js"></script>
+<script type="text/javascript" src="js/chartjs/chart.min.js"></script>
+
+<!-- Installer Library -->
+<script type="module" src="js/esp-web-tools/install-button.js?module"></script>
+
+<!-- Website library -->
+<script type="text/javascript" src="js/default.js"></script>
+<script type="text/javascript" src="js/components.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+
+</html>
