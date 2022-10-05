@@ -16,11 +16,14 @@ bool tft_output(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t *bitmap)
 
 void setup_tft()
 {
+  Serial.begin(115200);
   tft.begin();
   if (!LittleFS.begin())
   {
     Serial.println("LittleFS is not properly setup");
     return;
+  } else {
+    Serial.println("Little FS OK!");
   }
   tft.setSwapBytes(true);
   TJpgDec.setJpgScale(1);
@@ -29,6 +32,7 @@ void setup_tft()
 
 void display_image(const char *filename)
 {
+  Serial.println(filename);
   uint16_t w = 0, h = 0;
   TJpgDec.drawFsJpg(0, 0, filename, LittleFS);
 }
@@ -40,18 +44,18 @@ void setup()
 
 void loop()
 {
-  display_image("ia.jpg");
+  display_image("/ia.jpg");
   delay(3000);
-  display_image("ia2.jpg");
+  display_image("/ia2.jpg");
   delay(3000);
-  display_image("ia3.jpg");
+  display_image("/ia3.jpg");
   delay(3000);
-  display_image("ia4.jpg");
+  display_image("/ia4.jpg");
   delay(3000);
-  display_image("ia5.jpg");
+  display_image("/ia5.jpg");
   delay(3000);
-  display_image("ia6.jpg");
+  display_image("/ia6.jpg");
   delay(3000);
-  display_image("ia7.jpg");
+  display_image("/ia7.jpg");
   delay(3000);
 }
