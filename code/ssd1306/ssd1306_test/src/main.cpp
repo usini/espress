@@ -1,8 +1,3 @@
-/*********
-  Rui Santos
-  Complete project details at https://randomnerdtutorials.com  
-*********/
-
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -16,15 +11,14 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 void setup() {
   Serial.begin(115200);
   Serial.println("SSD1306 Test");
+  
   #ifdef M5STICKC
   pinMode(10, OUTPUT);
   digitalWrite(10, LOW);
   
   uint32_t frequency = 100000;
   Wire.begin(0, 26, frequency);
-  #endif
-
-  #ifdef LOLIN_D32
+  #else
   Wire.begin();
   #endif
 
