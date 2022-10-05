@@ -35,12 +35,35 @@ function generate_apps() {
 
 function generate_html_template(){
   document.getElementById("html_app").innerHTML = app_html;
+  generate_javascript();
 }
 
 function generate_javascript_template(path){
   var script_app = document.createElement('script');
   script_app.src = path
   document.head.appendChild(script_app); 
+}
+
+function generate_javascript(){
+  app_json.forEach(element => {
+    path = `apps/${component}/html/${component}_${element.path}.js`
+    fetch(path).then(function (response) {
+      if (response.ok) {
+        
+        console.log(path);
+        return path
+
+      } else {
+        return undefined;
+      }
+    }).then(function (text) {
+      if(text !== undefined){
+      generate_javascript_template(text);
+      }
+    }).catch(function (error) {
+      console.log(`ERROR JS : apps/${component}/html/${element.path}.js`);
+    });
+  });
 }
 
 function generate_html() {
@@ -62,25 +85,7 @@ function generate_html() {
     });
   });
 
-  app_json.forEach(element => {
-    path = `apps/${component}/html/${component}_${element.path}.js`
-    fetch(path).then(function (response) {
-      if (response.ok) {
-        
-        console.log(path);
-        return path
-
-      } else {
-        return undefined;
-      }
-    }).then(function (text) {
-      if(text !== undefined){
-      generate_javascript_template(text);
-      }
-    }).catch(function (error) {
-      console.log(`ERROR JS : apps/${component}/html/${element.path}.js`);
-    });
-  });
+ 
 }
 
 function generate_apps_template() {
