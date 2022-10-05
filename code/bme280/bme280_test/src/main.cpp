@@ -49,9 +49,7 @@ void printValues()
 bool bme_begin(){
     #ifdef M5STICKC
     return bme.begin(0x76, &I2CBME);
-    #endif
-
-    #ifdef LOLIN_D32
+    #else
     return bme.begin(0x76);
     #endif
 }
