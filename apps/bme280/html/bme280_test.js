@@ -126,7 +126,6 @@ function no_data() {
         document.getElementById("app_status").innerHTML = "⚠️ No data sent, did you upload the app ?";
         translate_all(lang);
     }
-
 }
 
 function serial_read(text) {
