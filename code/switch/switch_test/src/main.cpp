@@ -1,47 +1,50 @@
 #include <Arduino.h>
 
+#ifdef WEMOS_D1_MINI
+const int SWITCH_PIN = D1;
+const int LED_PIN = D4;
+#define SWITCH_PULLUP
+const bool ON_STATE = LOW;
+#endif
+
+#ifdef LOLIN_D32
+const int SWITCH_PIN = 13;
+const int LED_PIN = 5;
+#define SWITCH_PULLUP
+const bool ON_STATE = LOW;
+#endif
+
+#ifdef M5STICKC
+const int SWITCH_PIN = 37;
+const int LED_PIN = 10;
+#define SWITCH_PULLUP
+const bool ON_STATE = LOW;
+#endif
+
 void setup()
 {
   Serial.begin(115200);
-  Serial.println("Button - https://usini.eu/espress");
+  Serial.println("Switch - https://usini.eu/espress");
 
-#ifdef LOLIN_D32
-  pinMode(5, OUTPUT);        // LOLIN D32
-  pinMode(13, INPUT_PULLUP); // ESP32
-#endif
+  #ifdef SWITCH_PULLUP
+    pinMode(SWITCH_PIN, INPUT_PULLUP);
+  #else
+    pinMode(SWITCH_PIN, INPUT);
+  #endif
 
-#ifdef M5STICKC
-  pinMode(10, OUTPUT); // M5STICK C
-  pinMode(37, INPUT);  // M5STICK C
-#endif
+  pinMode(LED_PIN, OUTPUT);
 }
+
 
 void loop()
 {
-
-#ifdef LOLIN_D32
-  if (!digitalRead(13))
+  if (digitalRead(SWITCH_PIN) == ON_STATE)
   {
     Serial.println("Pressed");
-    digitalWrite(5, LOW);
+    digitalWrite(LED_PIN, HIGH);
   }
   else
   {
-    Serial.println("Not Pressed");
-    digitalWrite(5, HIGH);
+    digitalWrite(LED_PIN, LOW);
   }
-#endif
-
-#ifdef M5STICKC
-  if (!digitalRead(37))
-  {
-    Serial.println("Pressed");
-    digitalWrite(10, LOW);
-  }
-  else
-  {
-    Serial.println("Not Pressed");
-    digitalWrite(10, HIGH);
-  }
-#endif
 }
