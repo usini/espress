@@ -56,8 +56,11 @@ def generate_filesystem(app, folder):
 
 def clean_app(folder):
       if(clean_after):
-        shutil.rmtree(folder +"\\.pio")
-        shutil.rmtree(folder + "\\.vscode")
+        try:
+            shutil.rmtree(folder +"\\.pio")
+            shutil.rmtree(folder + "\\.vscode")
+        except:
+            print("No need to delete .pio or .vscode")
         print(" [CLEAN] ---> Success!")
 
 def generate_all_apps():
@@ -110,8 +113,10 @@ def copy_app(directory, app_path, app):
             files_to_copy.append(platformio_path + bootloader_path + "\\" + manifest_json["builds"][0]["parts"][0]["path"])
             files_to_copy.append(app_path + app + "\\.pio\\build\\" + board +  "\\firmware.bin")
             files_to_copy.append(app_path + app + "\\.pio\\build\\" + board + "\\partitions.bin")
-            if(little_fs_enable):
-                files_to_copy.append(app_path + app + "\\.pio\\build\\" + board + "\\littlefs.bin")
+        if(manifest_json["builds"][0]["chipFamily"] == "ESP8266"):
+            files_to_copy.append(app_path + app + "\\.pio\\build\\" + board +  "\\firmware.bin")  
+        if(little_fs_enable):
+            files_to_copy.append(app_path + app + "\\.pio\\build\\" + board + "\\littlefs.bin")
         
         final_path = "..\\apps\\" + directory + "\\boards\\" + board + "\\bins\\" + app + "\\"
         #print(files_to_copy)
