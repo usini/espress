@@ -14,8 +14,6 @@ if (navigator.language.includes("fr")) {
     translate_all(lang);
 }
 
-
-
 function translate_all(lang) {
     if (translation) {
         for (const [key, value] of Object.entries(document.querySelectorAll(".i18n"))) {

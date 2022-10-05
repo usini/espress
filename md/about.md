@@ -26,7 +26,7 @@ The code has been designed in such a way that it can work offline.
 ## Libraries used by the site
 * [Pico.css](https://picocss.com/) by Pico - MIT License
 * [esp-web-tools](https://github.com/esphome/esp-web-tools) by ESPHome - MIT License
-* [esperial](https://github.com/usini/esperial) by µsini - MIT License
+* [esprerial](https://github.com/usini/esprerial) by µsini - MIT License
 * [gauge](https://github.com/bernii/gauge.js) by Bernard Kobos - MIT License
 * [marked](https://github.com/markedjs/marked) by Christopher Jeffrey - MIT License
 

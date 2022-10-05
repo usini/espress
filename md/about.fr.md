@@ -7,7 +7,7 @@
 µSINI espress a deux objectifs:
 
 * Permettre de tester rapidement des composants électroniques sans avoir à se demander si le code est correcte.
-* Etre un outil simple et ludique destiné à assister les médiateurs numériques / formateurs afin de faire découvrir l'électronique Open Hardware à un public large.
+* Etre un outil simple et ludique afin de faire découvrir l'électronique Open Hardware à un public large.
 
 # Données personnelles
 Aucune données personnelles n'est transmises par ce site, le site web est entièrement statique et vous pouvez l'héberger sur votre propre plateforme.   
@@ -26,7 +26,7 @@ Le code a été pensé de façon à pouvoir fonctionner hors-ligne.
 ## Bibliothèques utilisés par le site
 * [Pico.css](https://picocss.com/) par Pico - MIT License
 * [esp-web-tools](https://github.com/esphome/esp-web-tools) par ESPHome - MIT License
-* [esperial](https://github.com/usini/esperial) par µsini - MIT License
+* [esprerial](https://github.com/usini/esprerial) par µsini - MIT License
 * [gauge](https://github.com/bernii/gauge.js) par Bernard Kobos - MIT License
 * [marked](https://github.com/markedjs/marked) par Christopher Jeffrey - MIT License
 
