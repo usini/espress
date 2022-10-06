@@ -37,6 +37,9 @@ void setup()
   file = new AudioFileSourceLittleFS("/nyan.mp3");
   id3 = new AudioFileSourceID3(file);
   out = new AudioOutputI2S();
+  #ifdef ESP32
+  out->SetPinout(26,25,27);
+  #endif
   mp3 = new AudioGeneratorMP3();
   mp3->begin(id3, out);
 }
