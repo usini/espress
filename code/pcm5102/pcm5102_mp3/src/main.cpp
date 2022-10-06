@@ -13,7 +13,6 @@ void loop()
 #else
 #ifdef ESP32
 #include <WiFi.h>
-#include "SPIFFS.h"
 #else
 #include <ESP8266WiFi.h>
 #endif
