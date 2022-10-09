@@ -13,7 +13,6 @@ void loop()
 #else
 #ifdef ESP32
 #include <WiFi.h>
-#include "SPIFFS.h"
 #else
 #include <ESP8266WiFi.h>
 #endif
@@ -38,6 +37,9 @@ void setup()
   file = new AudioFileSourceLittleFS("/nyan.mp3");
   id3 = new AudioFileSourceID3(file);
   out = new AudioOutputI2S();
+  #ifdef ESP32
+  out->SetPinout(26,25,27);
+  #endif
   mp3 = new AudioGeneratorMP3();
   mp3->begin(id3, out);
 }
