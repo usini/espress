@@ -1,42 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="97.62429mm"
-   height="43.412998mm"
-   viewBox="0 0 97.62429 43.412998"
-   version="1.1"
-   id="svg3644"
-   sodipodi:docname="board.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs3648" />
-  <sodipodi:namedview
-     id="namedview3646"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="1"
-     inkscape:cx="154"
-     inkscape:cy="-24"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg3644" />
-  <!-- Code injected by live-server -->
-  <script
-     id="script3642">
-	// <![CDATA[  <-- For SVG support
+<svg width="368.974" height="164.081" viewBox="0 0 97.624 43.413" version="1.1" id="svg3644" xmlns="http://www.w3.org/2000/svg"><script id="script3642">//<![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
 		(function () {
 			function refreshCSS() {
@@ -70,9 +32,4 @@
 	else {
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
-	// ]]></script>
-  <path
-     id="path7132"
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:33.753"
-     d="m -213.60398,-9122.4093 c -3972.46552,17.4912 -7799.35912,2380.5944 -9221.15912,6309.122 -1638.6229,4527.6228 604.2456,9828.1948 5216.7812,11460.9068 4059.38634,1436.9115 8802.3496,-586.5752 10228.9984,-4732.4782 l -3432.3982,-1495.21 c -590.0778,2282.3802 -3118.01711,3433.0358 -5301.3984,2795.2898 -2747.5626,-802.538 -4115.2078,-3880.1466 -3279.585,-6533.2981 1012.0516,-3213.3223 4642.9371,-4799.0283 7765.1987,-3763.8883 3679.4773,1219.8764 5483.8665,5406.13651 4248.1829,8997.0984 -8e-4,0 8e-4,0 0,0 l 3432.39,1495.202 C 11486.407,-53.358827 8804.2265,-6470.8505 3258.0353,-8514.3557 2126.1935,-8931.3845 950.04763,-9127.5333 -213.60398,-9122.4093 Z M 2578.6183,2419.9313 C 3021.3397,707.51603 2085.6237,-1277.7778 267.62347,-1649.567 -971.18425,-1902.9086 -2430.4713,-1177.0074 -2569.9749,177.12461 c -77.9888,757.0205 460.7058,1744.44469 1342.3967,1605.69839 325.35451,-51.1991 890.08223,-633.1921 373.79831,-858.09341 z" />
-</svg>
+	// ]]></script><path id="path7132" style="fill:none;fill-rule:evenodd;stroke:#000;stroke-width:33.753" d="M-213.604-9122.41c-3972.466 17.492-7799.36 2380.595-9221.16 6309.123-1638.622 4527.623 604.246 9828.194 5216.782 11460.907 4059.386 1436.911 8802.35-586.576 10228.999-4732.479l-3432.399-1495.21c-590.077 2282.38-3118.017 3433.036-5301.398 2795.29-2747.563-802.538-4115.208-3880.146-3279.585-6533.298 1012.052-3213.322 4642.937-4799.028 7765.199-3763.888C5442.31-3862.09 7246.7 324.17 6011.017 3915.133c-.001 0 0 0 0 0l3432.39 1495.202c2043-5463.694-639.18-11881.185-6185.372-13924.69-1131.841-417.03-2307.987-613.178-3471.639-608.054ZM2578.618 2419.932C3021.34 707.516 2085.624-1277.778 267.623-1649.567c-1238.807-253.342-2698.094 472.56-2837.598 1826.692-77.989 757.02 460.706 1744.444 1342.397 1605.698 325.354-51.2 890.082-633.192 373.798-858.093z"/></svg>
