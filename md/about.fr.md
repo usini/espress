@@ -2,6 +2,8 @@
 
 µSINI est une entreprise française basé sur Castelnau-le-lez qui fabrique des prototypes à l'aide de l'impression 3D et du matériel électronique Open Hardware (principalement en provenance d'Espressif)
 
+[Présentation 15 Septembre 2022 du projet pour le FabLab Saint-Gély du Fesc](pres_stgely.html)
+
 # Objectif de µsini espress
 
 µSINI espress a deux objectifs:
