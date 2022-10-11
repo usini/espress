@@ -4,5 +4,6 @@
     "ssd1306",
     "st7789",
     "bme280",
-    "pcm5102"
+    "pcm5102",
+    "neopixels_16_circle"
 ]
