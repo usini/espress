@@ -3,7 +3,7 @@ const renderer = {
   
       return `
               <center>
-              <img src="${href}" alt=${text}>
+              <img src="md/${href}" alt=${text}>
               <br><strong>${text}</strong>
               </center>
               `
