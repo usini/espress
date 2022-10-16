@@ -135,7 +135,7 @@ Tous les schémas, composants sont donc téléchargeables en deux clics puis mod
 
 ![Copie d'image SVG](pres_gely_img/15.png)
 
-Toutes les illustrations ont été créés sous Inkscape par µsini, et sont sous licence CC-0 (Domaine Public)
+Toutes les illustrations ont été créés sous Inkscape par µsini, et sont sous licence CC-0 (Domaine Public)   
 
 ![Licence CC Zéro](pres_gely_img/16.png)
 Ainsi elles peuvent être réutilisées sans attribution.
@@ -281,7 +281,7 @@ Chaque code arduino doit donc être compilé sous la forme d’un micrologiciel 
 Pour programmer ces firmwares, j’ai utilisé platformio ce qui me permet d’automatiser leur génération et leur copie à l’aide d’un script python.
 
 ### Structure des dossiers de code Arduino
-Les codes Arduino sont disponibles dans le dossier code, qui est similaire à la structure du dossier apps (composant / programme)
+Les codes Arduino sont disponibles dans le dossier code, qui est similaire à la structure du dossier apps (composant / programme)   
 ![Structure des dossiers de code Arduino](pres_gely_img/30.png)
 
 ### Spécificités des cartes / microcontrôleurs 
@@ -398,7 +398,7 @@ Si on extrait la fin de la commande, on obtient l’ensemble des fichiers télé
 
 Vous notez que les nombres sont différents de ceux présents dans le manifest.json, c’est parce qu’ils sont représentés par des valeurs hexadécimales alors que dans le manifest.json il sont dans des valeurs décimales.
 
-Il nous faut donc les convertir (https://www.rapidtables.com/convert/number/hex-to-decimal.html)
+Il nous faut donc les convertir (https://www.rapidtables.com/convert/number/hex-to-decimal.html)   
 ![Convertisseur hexadécimal](pres_gely_img/37.png)
 
 Vous n’aurez pas pour autant la position de la partition de données LittleFS par ce moyen, pour cela il faut exécuter la commande
