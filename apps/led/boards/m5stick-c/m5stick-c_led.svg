@@ -1,1 +1,119 @@
-<svg width="200mm" height="90mm" viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(0 1.18348 -1.18348 0 186.837 -194.637)"><rect style="fill:#f7a538;fill-opacity:1;stroke:none;stroke-width:.9;stroke-dasharray:none" width="74.648" height="37.044" x="165.243" y="53.129" ry="4.49"/><rect style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:.899999;stroke-dasharray:none" width="33.115" height="16.557" x="173.288" y="63.419" ry=".935"/><path style="fill:#f7a538;fill-opacity:1;stroke:#af6707;stroke-width:.899999;stroke-dasharray:none;stroke-opacity:1" d="m228.807 60.519-11.46.093c-1.184.333-1.396 1.112-1.87 1.918l-.047 17.82c.442 1.18 1.381 1.744 2.058 2.105l11.74-.047"/><text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;fill:#fa9627;fill-opacity:1;stroke:none;stroke-width:.899999;stroke-dasharray:none" x="-80.537" y="227.226" transform="rotate(-90)"><tspan style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;fill:#fa9627;fill-opacity:1;stroke:none;stroke-width:.9" x="-80.537" y="227.226">M5</tspan></text></g><path style="fill:#c00;fill-opacity:.485955;stroke:none;stroke-width:2.48529;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-opacity:1" d="m92.123 18.888-12.04-.066V5.213C80.674 2.86 82.2 1.44 84.534.83l7.59.066z"/><rect style="fill:#000;fill-opacity:1;stroke:none;stroke-width:2.48529;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-opacity:1" width="16.227" height="5.234" x="61.633" y="3.512" ry="2.617"/><text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:5.43885px;font-family:Arial;-inkscape-font-specification:Arial;fill:#c00;fill-opacity:1;stroke:none;stroke-width:1.19912;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-opacity:1" x="64.168" y="8.032"><tspan style="fill:#c00;stroke-width:1.19912" x="64.168" y="8.032">G10</tspan></text></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="62.326889mm"
+   height="100.80613mm"
+   viewBox="0 0 62.326889 100.80613"
+   version="1.1"
+   id="svg228"
+   sodipodi:docname="m5stick-c_led.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs232">
+    <filter
+       y="-1.2542225"
+       height="3.5084451"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark and Glow"
+       style="color-interpolation-filters:sRGB"
+       id="filter17771-3"
+       x="-0.91856676"
+       width="2.8371335">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur17761-4" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"
+         result="result10"
+         id="feColorMatrix17767-3" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend17769-7" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview230"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2123346"
+     inkscape:cx="-72.587223"
+     inkscape:cy="122.07851"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg228" />
+  <g
+     transform="matrix(0,1.18348,-1.18348,0,125.204,-183.10007)"
+     id="g218">
+    <rect
+       style="fill:#f7a538;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-dasharray:none"
+       width="74.648003"
+       height="37.043999"
+       x="165.243"
+       y="53.129002"
+       ry="4.4899998"
+       id="rect208" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none;stroke-width:0.899999;stroke-dasharray:none"
+       width="33.115002"
+       height="16.556999"
+       x="173.28799"
+       y="63.418999"
+       ry="0.935"
+       id="rect210" />
+    <path
+       style="fill:#f7a538;fill-opacity:1;stroke:#af6707;stroke-width:0.899999;stroke-dasharray:none;stroke-opacity:1"
+       d="m 228.807,60.519 -11.46,0.093 c -1.184,0.333 -1.396,1.112 -1.87,1.918 l -0.047,17.82 c 0.442,1.18 1.381,1.744 2.058,2.105 l 11.74,-0.047"
+       id="path212" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;fill:#fa9627;fill-opacity:1;stroke:none;stroke-width:0.899999;stroke-dasharray:none"
+       x="-80.537003"
+       y="227.226"
+       transform="rotate(-90)"
+       id="text216"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:Arial;fill:#fa9627;fill-opacity:1;stroke:none;stroke-width:0.9"
+         x="-80.537003"
+         y="227.226"
+         id="tspan214">M5</tspan></text>
+  </g>
+  <path
+     style="fill:#df0f0f;fill-opacity:1;stroke:none;stroke-width:0.77;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter17771-3)"
+     d="m 77.727345,10.185465 a 5.6433143,4.784115 0 0 0 5.64332,4.78356 5.6433143,4.784115 0 0 0 0.10483,-0.003 v 0.003 h 7.31568 v -9.56768 h -7.31623 v 0.003 a 5.6433143,4.784115 0 0 0 -0.10428,-0.003 5.6433143,4.784115 0 0 0 -5.64332,4.78412 z"
+     id="led-light"
+     transform="matrix(1.2335105,0,0,1.2335105,-78.52423,8.1395098)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.48529;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-opacity:1"
+     width="16.226999"
+     height="5.2340002"
+     x="0"
+     y="15.048926"
+     ry="2.6170001"
+     id="rect222" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:5.43885px;font-family:Arial;-inkscape-font-specification:Arial;fill:#cc0000;fill-opacity:1;stroke:none;stroke-width:1.19912;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-opacity:1"
+     x="2.5349998"
+     y="19.568926"
+     id="text226"><tspan
+       style="fill:#cc0000;stroke-width:1.19912"
+       x="2.5349998"
+       y="19.568926"
+       id="tspan224">G10</tspan></text>
+</svg>

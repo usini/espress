@@ -1,0 +1,65 @@
+blink_state = true;
+blinker = setInterval(led_blink, 1000);
+
+function led_blink() {
+    if (blink_state) {
+        led_on();
+    } else {
+        led_off();
+    }
+    blink_state = !blink_state;
+}
+
+function led_on() {
+
+    document.getElementById("led-light").style.opacity = 0;
+    if (board != "m5stick-c") {
+        document.getElementById("led").style.opacity = 0.8;
+        if (board == "lolin_d32") {
+            document.getElementById("internal_led").style.fill = "rgb(54, 52, 168)";
+            document.getElementById("internal_led-light").style.opacity = 1;
+        } else {
+            document.getElementById("internal_led").style.fill = "#dfd7cd";
+            document.getElementById("internal_led-light").style.opacity = 0;
+        }
+    }
+}
+
+function led_off() {
+
+    document.getElementById("led-light").style.opacity = 1;
+    if (board != "m5stick-c") {
+        document.getElementById("led").style.opacity = 1;
+        if (board == "lolin_d32") {
+            document.getElementById("internal_led").style.fill = "#dfd7cd";
+            document.getElementById("internal_led-light").style.opacity = 0;
+        } else {
+            document.getElementById("internal_led").style.fill = "rgb(54, 52, 168)";
+            document.getElementById("internal_led-light").style.opacity = 1;
+        }
+       
+    }
+}
+
+    translate_all(lang);
+
+    serial = new Esprerial();
+
+    function serial_start() {
+        clearInterval(blinker);
+    }
+
+    function serial_read(text) {
+        switch (text) {
+            case "ON":
+                led_on();
+                break;
+
+            case "OFF":
+                led_off();
+                break;
+        }
+    }
+
+    serial.setRead(serial_read);
+    serial.setStart(serial_start);

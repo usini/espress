@@ -1,4 +1,6 @@
 selected_obj = "";
+current_id = 0;
+selected_id = 0;
 
 function load_breadboard(svg_info) {
     fetch("boards/breadboard.svg").then(function (response) {
@@ -21,8 +23,7 @@ function get_group_in_svg(svg_code, id) {
     return new XMLSerializer().serializeToString(svg_group);
 }
 
-current_id = 0;
-selected_id = 0;
+
 function load_component(svg_info) {
     still_loading = false;
     var id = 0;
@@ -128,5 +129,37 @@ function mover(e, mover_id) {
     document.getElementById(svg_info[selected_id].name).setAttribute("transform", object_to_coordinate(coordinate));
     svg_info[selected_id].transform = transform_attr;
     document.getElementById(mover_id).innerHTML = JSON.stringify(svg_info);
-    
+
 }
+
+function load_svg(svg_file) {
+    fetch(svg_file).then(function (response) {
+        return response.text();
+    }).then(function (svg) {
+        document.getElementById("diagram").innerHTML = svg;
+
+        //Resize SVG to the size of the buttons underneath
+        resize_svg();
+
+        //Observe any size change
+        const ro = new ResizeObserver(entries => {
+            resize_svg();
+        });
+        ro.observe(document.getElementById("app_selector"));
+    }).catch(function (error) {
+    });
+}
+
+
+function resize_svg() {
+    document.getElementById("diagram").children[0].setAttribute("width", document.getElementById("goback").offsetWidth);
+}
+
+// Responsive SVG
+
+// Observe orientation change to resize SVG
+window.addEventListener("orientationchange", (event) => {
+    setTimeout(resize_svg,200);
+});
+
+

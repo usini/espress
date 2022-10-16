@@ -9,8 +9,8 @@ if (board == undefined) {
   board = "lolin_d32";
 }
 
-if(document.getElementById("schematics") != null){
-  document.getElementById("schematics").src = `apps/${component}/boards/${board}/${board}_${component}.svg`;
+if(document.getElementById("diagram") != null){
+  load_svg(`apps/${component}/boards/${board}/${board}_${component}.svg`);
 }
 
 app_json = [{
@@ -87,8 +87,6 @@ function generate_html() {
       console.log("Error HTML");
     });
   });
-
- 
 }
 
 function generate_apps_template() {
