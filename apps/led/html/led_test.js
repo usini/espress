@@ -37,29 +37,32 @@ function led_off() {
             document.getElementById("internal_led").style.fill = "rgb(54, 52, 168)";
             document.getElementById("internal_led-light").style.opacity = 1;
         }
-       
     }
 }
 
-    translate_all(lang);
+translate_all(lang);
 
-    serial = new Esprerial();
 
-    function serial_start() {
-        clearInterval(blinker);
+
+function serial_start() {
+    clearInterval(blinker);
+}
+
+function serial_read(text) {
+    switch (text) {
+        case "ON":
+            led_on();
+            break;
+
+        case "OFF":
+            led_off();
+            break;
     }
-
-    function serial_read(text) {
-        switch (text) {
-            case "ON":
-                led_on();
-                break;
-
-            case "OFF":
-                led_off();
-                break;
-        }
-    }
-
-    serial.setRead(serial_read);
-    serial.setStart(serial_start);
+}
+if(navigator.serial){
+serial = new Esprerial();
+serial.setRead(serial_read);
+serial.setStart(serial_start);
+} else {
+    document.getElementById("esperial_button").remove();
+}

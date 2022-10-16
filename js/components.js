@@ -9,7 +9,7 @@ if (board == undefined) {
   board = "lolin_d32";
 }
 
-if(document.getElementById("diagram") != null){
+if (document.getElementById("diagram") != null) {
   load_svg(`apps/${component}/boards/${board}/${board}_${component}.svg`);
 }
 
@@ -19,9 +19,15 @@ app_json = [{
 }];
 
 app_html = "";
-if(navigator.serial){
-document.getElementById("not-supported").remove();
+if (navigator.serial) {
+  document.getElementById("not-supported").remove();
+
+} else {
+  document.getElementById("app_selector").remove();
+}
+
 generate_apps();
+
 function generate_apps() {
   try {
     fetch(`apps/${component}/${component}.json`).then(response => response.json()).then(function (json) {
@@ -36,23 +42,23 @@ function generate_apps() {
   }
 }
 
-function generate_html_template(){
+function generate_html_template() {
   document.getElementById("html_app").innerHTML = app_html;
   generate_javascript();
 }
 
-function generate_javascript_template(path){
+function generate_javascript_template(path) {
   var script_app = document.createElement('script');
   script_app.src = path
-  document.head.appendChild(script_app); 
+  document.head.appendChild(script_app);
 }
 
-function generate_javascript(){
+function generate_javascript() {
   app_json.forEach(element => {
     path = `apps/${component}/html/${component}_${element.path}.js`
     fetch(path).then(function (response) {
       if (response.ok) {
-        
+
         console.log(path);
         return path
 
@@ -60,8 +66,8 @@ function generate_javascript(){
         return undefined;
       }
     }).then(function (text) {
-      if(text !== undefined){
-      generate_javascript_template(text);
+      if (text !== undefined) {
+        generate_javascript_template(text);
       }
     }).catch(function (error) {
       console.log(`ERROR JS : apps/${component}/html/${element.path}.js`);
@@ -79,9 +85,9 @@ function generate_html() {
         return undefined;
       }
     }).then(function (text) {
-      if(text !== undefined){
-      app_html = text;
-      generate_html_template();
+      if (text !== undefined) {
+        app_html = text;
+        generate_html_template();
       }
     }).catch(function (error) {
       console.log("Error HTML");
@@ -102,8 +108,4 @@ function generate_apps_template() {
     `
     document.getElementById("apps").innerHTML += app_installer_template;
   });
-}
-
-} else {
-  document.getElementById("app_selector").remove();
 }

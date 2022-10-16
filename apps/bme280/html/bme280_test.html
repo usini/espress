@@ -1,27 +1,31 @@
-<button class="i18n" onclick="serial.begin()">Connect</button>
-<center><header class="i18n" id="app_status">❓ Board not connected</header></center>
-<h1 class="i18n">Data</h1>
-<div class="grid">
-    
-    <div>
-        <center>
-        <canvas id="temperature">
-        </canvas>
-            <h1 id="temperature_label">? °C</h1>
-        </center>
-    </div>
-    <div>
-        <center>
-        <canvas id="humidity">
-        </canvas>   
-            <h1 id="humidity_label">? %</h1>
-        </center>
-    </div>
-<div>
+<div id="webserial">
+    <button class="i18n" onclick="serial.begin()">Connect</button>
     <center>
-    <canvas id="pressure">
-    </canvas>
-        <h1 id="pressure_label">? hPA</h1>
+        <header class="i18n" id="app_status">❓ Board not connected</header>
     </center>
-</div>
+    <h1 class="i18n">Data</h1>
+    <div class="grid">
+
+        <div>
+            <center>
+                <canvas id="temperature">
+                </canvas>
+                <h1 id="temperature_label">? °C</h1>
+            </center>
+        </div>
+        <div>
+            <center>
+                <canvas id="humidity">
+                </canvas>
+                <h1 id="humidity_label">? %</h1>
+            </center>
+        </div>
+        <div>
+            <center>
+                <canvas id="pressure">
+                </canvas>
+                <h1 id="pressure_label">? hPA</h1>
+            </center>
+        </div>
+    </div>
 </div>
