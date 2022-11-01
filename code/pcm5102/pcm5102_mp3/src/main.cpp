@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#ifdef M5STICKC
+#ifdef UNSUPPORTED
 void setup()
 {
   Serial.begin(115200);

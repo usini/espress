@@ -1,8 +1,20 @@
 // Animates white pixels to simulate flying through a star field
+#include <Arduino.h>
+
+#ifdef UNSUPPORTED
+void setup()
+{
+   Serial.begin(115200);
+}
+
+void loop()
+{
+  Serial.println("Not supported");
+}
+#else
 
 #include <SPI.h>
 #include <TFT_eSPI.h>
-
 // Use hardware SPI
 TFT_eSPI tft = TFT_eSPI();
 
@@ -47,10 +59,10 @@ void setup()
 
 void loop()
 {
-  #ifdef M5STICKC
+#ifdef M5STICKC
   Serial.println("Not supported on M5STICK-C");
   delay(1000);
-  #else
+#else
   unsigned long t0 = micros();
   uint8_t spawnDepthVariation = 255;
 
@@ -92,5 +104,7 @@ void loop()
 
   // Calcualte frames per second
   Serial.println(1.0 / ((t1 - t0) / 1000000.0));
-  #endif
+#endif
 }
+
+#endif

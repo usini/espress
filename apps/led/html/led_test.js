@@ -11,26 +11,38 @@ function led_blink() {
 }
 
 function led_on() {
-
-    document.getElementById("led-light").style.opacity = 0;
+    if(board == "m5stick-c"){
+        document.getElementById("led-light").style.opacity = 0;
+    }
+    else{
+        document.getElementById("led-light").style.opacity = 1;
+    }
+    
     if (board != "m5stick-c") {
-        document.getElementById("led").style.opacity = 0.8;
-        if (board == "lolin_d32") {
-            document.getElementById("internal_led").style.fill = "rgb(54, 52, 168)";
+        //document.getElementById("led").style.opacity = 0.8;
+        if (board == "uno") {
+            document.getElementById("internal_led").style.fill = "rgb(255, 140, 0)";
             document.getElementById("internal_led-light").style.opacity = 1;
         } else {
             document.getElementById("internal_led").style.fill = "#dfd7cd";
             document.getElementById("internal_led-light").style.opacity = 0;
+
         }
+
     }
 }
 
 function led_off() {
-
-    document.getElementById("led-light").style.opacity = 1;
+    if(board == "m5stick-c"){
+        document.getElementById("led-light").style.opacity = 1;
+    }
+    else{
+        document.getElementById("led-light").style.opacity = 0;
+    }
+        
     if (board != "m5stick-c") {
-        document.getElementById("led").style.opacity = 1;
-        if (board == "lolin_d32") {
+        //document.getElementById("led").style.opacity = 1;
+        if (board == "uno") {
             document.getElementById("internal_led").style.fill = "#dfd7cd";
             document.getElementById("internal_led-light").style.opacity = 0;
         } else {
@@ -42,13 +54,12 @@ function led_off() {
 
 translate_all(lang);
 
-
-
 function serial_start() {
     clearInterval(blinker);
 }
 
 function serial_read(text) {
+    console.log(text);
     switch (text) {
         case "ON":
             led_on();
@@ -59,10 +70,11 @@ function serial_read(text) {
             break;
     }
 }
-if(navigator.serial){
-serial = new Esprerial();
-serial.setRead(serial_read);
-serial.setStart(serial_start);
+
+if (navigator.serial) {
+    serial = new Esprerial();
+    serial.setRead(serial_read);
+    serial.setStart(serial_start);
 } else {
     document.getElementById("esperial_button").remove();
 }

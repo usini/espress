@@ -1,5 +1,15 @@
 #include <Arduino.h>
 
+#ifdef ARDUINO_UNO
+void setup(){
+	Serial.begin(115200);
+}
+void loop(){
+	Serial.println("ESPNOW is not supported by Arduino Uno");
+	delay(1000);
+}
+#else
+
 #ifdef ESP8266
 #include <ESP8266WiFi.h>
 #include <espnow.h>
@@ -191,3 +201,5 @@ void loop()
 {
 	change_state();
 }
+
+#endif

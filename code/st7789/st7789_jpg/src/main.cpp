@@ -1,3 +1,18 @@
+// Animates white pixels to simulate flying through a star field
+#include <Arduino.h>
+
+#ifdef UNSUPPORTED
+void setup()
+{
+   Serial.begin(115200);
+}
+
+void loop()
+{
+  Serial.println("Not supported");
+}
+#else
+
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include "FS.h"
@@ -59,3 +74,5 @@ void loop()
   display_image("/ia7.jpg");
   delay(3000);
 }
+
+#endif

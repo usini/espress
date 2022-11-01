@@ -51,13 +51,16 @@ const closeModal = modal => {
 }
 
 // Close with a click outside
+/*
 document.addEventListener('click', event => {
   if (visibleModal != null) {
     const modalContent = visibleModal.querySelector('article');
+    alert(modalContent);
     const isClickInside = modalContent.contains(event.target);
     !isClickInside && closeModal(visibleModal);
   }
 });
+*/
 
 // Close with Esc key
 document.addEventListener('keydown', event => {

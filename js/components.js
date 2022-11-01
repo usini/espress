@@ -1,12 +1,17 @@
 const urlParams = new URLSearchParams(window.location.search);
 component = urlParams.get("c");
 board = urlParams.get("b");
+board_avr = false;
 
 if (component == undefined) {
   component = "led";
 }
 if (board == undefined) {
   board = "lolin_d32";
+}
+
+if (board == "uno") {
+  board_avr = true;
 }
 
 if (document.getElementById("diagram") != null) {
@@ -96,16 +101,48 @@ function generate_html() {
 }
 
 function generate_apps_template() {
+
   app_json.forEach(element => {
     app_name = element.name;
     app_path = element.path;
-    app_installer_template = `    
+
+    if (board_avr) {
+      app_installer_template = `
+      <center>
+      <button
+        id="installer"
+        arduino-uploader
+        hex-href="apps/${component}/boards/${board}/bins/${component}_${app_path}/firmware.hex"
+        board="${board}"
+        data-target="modal-apps" 
+
+        >
+        ${app_name}
+        <span class="upload-progress"></span>
+        
+      </button>
+      </center>
+      `
+    } else {
+      app_installer_template = `    
     <center>
     <esp-web-install-button id="installer" manifest="apps/${component}/boards/${board}/bins/${component}_${app_path}/manifest.json">
       <button data-target="modal-apps" onClick="toggleModal(event)" slot="activate">${app_name}</button>
     </esp-web-install-button>   
     </center>
     `
+    }
+
     document.getElementById("apps").innerHTML += app_installer_template;
+
   });
+  if(board_avr){
+    add_avr_uploader();
+  }
+}
+
+function add_avr_uploader() {
+  var script_i18n = document.createElement('script');
+  script_i18n.src = "js/arduino-web-uploader/main.js"
+  document.head.appendChild(script_i18n);
 }

@@ -1,5 +1,9 @@
 #include <Arduino.h>
 
+#ifdef ARDUINO_UNO
+  const int LED_PIN = 13;
+#endif
+
 #ifdef LOLIN_D32
   const int LED_PIN = 5;
 #endif
@@ -26,4 +30,3 @@ void loop() {
   digitalWrite(LED_PIN, LOW);
   delay(1000);
 }
-

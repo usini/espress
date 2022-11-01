@@ -10,5 +10,9 @@
     "d1_mini": {
         "board": "d1_mini",
         "name": "Wemos D1 Mini"
+    },
+    "uno": {
+        "board": "uno",
+        "name": "Arduino Uno"
     }
 }
