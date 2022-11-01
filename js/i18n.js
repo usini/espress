@@ -11,7 +11,7 @@ if (navigator.language.includes("fr")) {
 } else {
     translation = false;
     lang = {}
-    translate_all(lang);
+
 }
 
 function translate_all(lang) {
