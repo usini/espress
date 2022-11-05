@@ -6,5 +6,6 @@
     "bme280",
     "pcm5102",
     "neopixels_16_circle",
-    "ir_receiver"
+    "ir_receiver",
+    "pir"
 ]
