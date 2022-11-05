@@ -18,5 +18,7 @@ lang["⚠️ No data sent, did you upload the app ?"] = "⚠️ Aucune données 
 lang["❓ Board not connected"] = "❓ Carte non connecté";
 lang["🔌Board connected"] = "🔌Carte connecté";
 lang["Board"] = "Carte";
-lang["👌Sensor OK"] = "👌Capteur OK"
+lang["👌Sensor OK"] = "👌Capteur OK";
+lang["PRESENCE DETECTED"] = "PRÉSENCE DÉTECTÉ";
+lang["connected"] = "connecté";
 translate_all(lang);

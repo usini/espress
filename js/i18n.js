@@ -14,6 +14,14 @@ if (navigator.language.includes("fr")) {
 
 }
 
+function translate(text){
+    if (lang[text] == undefined) {
+        return text
+    } else {
+        return lang[text];
+    }
+}
+
 function translate_all(lang) {
     if (translation) {
         for (const [key, value] of Object.entries(document.querySelectorAll(".i18n"))) {
