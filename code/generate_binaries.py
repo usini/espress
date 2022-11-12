@@ -4,7 +4,7 @@ import configparser
 import shutil 
 
 compile_enable = True
-copy_enable = True
+copy_enable = False
 clean_after = False
 inkscape_path = "C:\\Program Files\\Inkscape\\bin\\inkscape.exe"
 #platformio_path = os.path.expanduser('~') + "\\.platformio\\packages\\"
@@ -88,7 +88,20 @@ def generate_all_apps():
             clean_app(app_path + "\\" + app)
             print(" <-------------------------------->")
             print(" ")
-   
+
+def generate_app(component):
+    print("------------------ Firmware generator ----------------- ")
+    app_path = os.getcwd() + "\\" + component + "\\"
+    apps = [d for d in os.listdir(app_path)]
+    for app in apps:
+        print(" <-------> " + app + " <--------> ")
+        generate_firmware(app, app_path + "\\" + app)
+        generate_filesystem(app, app_path + "\\" + app)
+        copy_app(component, app_path, app)
+        clean_app(app_path + "\\" + app)
+        print(" <-------------------------------->")
+        print(" ")
+
 def copy_app(directory, app_path, app):
     for board in boards.keys():
         config.read(app_path + app + "\\platformio.ini")
@@ -145,4 +158,4 @@ def copy_app(directory, app_path, app):
         config.clear()
 
 generate_all_apps()
-
+#generate_app("rotary_encoder")

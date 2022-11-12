@@ -7,5 +7,6 @@
     "pcm5102",
     "neopixels_16_circle",
     "ir_receiver",
-    "pir"
+    "pir",
+    "rotary_encoder"
 ]

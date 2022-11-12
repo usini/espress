@@ -1,2 +1,5 @@
-*.bin
+.vscode
 .pio
+*.bin
+build
+*.hex
